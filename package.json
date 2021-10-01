@@ -23,6 +23,7 @@
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch --runInBand",
-    "test:cov": "NODE_OPTIONS=--experimental-vm-modules npx jest --no-cache --runInBand --coverage"
+    "test:cov": "NODE_OPTIONS=--experimental-vm-modules npx jest --no-cache --runInBand --coverage",
+    "start": "node src/index.js"
   }
 }

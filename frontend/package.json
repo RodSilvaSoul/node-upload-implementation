@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "author": "Rodrigo Silva <rodsilvasoul@gmail.com>",
+  "description": "A implementation of the google drive upload process",
+  "dependencies": {
+    "http-server": "^13.0.2"
+  },
+  "scripts": {
+    "start": "npx http-server public -o"
+  }
+}

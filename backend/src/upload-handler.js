@@ -6,9 +6,9 @@ import Busboy from 'busboy';
 import { logger } from './logger.js';
 
 class UploadHandler {
-  constructor({ io, sockedID, downloadsFolder, messageTimeDelay = 300 }) {
+  constructor({ io, socketId, downloadsFolder, messageTimeDelay = 300 }) {
     this.io = io;
-    this.sockedID = sockedID;
+    this.socketId = socketId;
     this.downloadsFolder = downloadsFolder;
     this.ON_UPLOAD_EVENT = 'file-upload';
     this.messageTimeDelay = messageTimeDelay;
@@ -34,13 +34,13 @@ class UploadHandler {
         }
 
         this.io
-          .to(this.sockedID)
+          .to(this.socketId)
           .emit(this.ON_UPLOAD_EVENT, { processedAlready, fileName });
 
         this.lastMessageSent = Date.now();
 
         logger.info(
-          `File [${fileName}] go ${processedAlready} bytes to ${this.sockedID}`,
+          `File [${fileName}] go ${processedAlready} bytes to ${this.socketId}`,
         );
       }
     }

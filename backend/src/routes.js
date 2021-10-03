@@ -34,11 +34,12 @@ class Router {
     const { headers } = req;
 
     const {
-      query: { sockedId },
+      query: { socketId },
     } = parse(req.url, true);
 
+
     const uploadHandler = new UploadHandler({
-      sockedId,
+      socketId,
       io: this.io,
       downloadsFolder: this.downloadsFolder,
     });

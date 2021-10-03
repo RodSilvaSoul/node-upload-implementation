@@ -43,10 +43,10 @@ class Router {
       downloadsFolder: this.downloadsFolder,
     });
 
-    const onFinish = (res) => () => {
-      res.writeHead(200);
+    const onFinish = (_res) => () => {
+      _res.writeHead(200);
       const data = JSON.stringify({ result: 'Files uploaded with success!' });
-      res.end(data);
+      _res.end(data);
     };
 
     const busboyInstance = uploadHandler.registerEvents(headers, onFinish(res));

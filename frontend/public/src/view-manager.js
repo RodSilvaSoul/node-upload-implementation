@@ -7,8 +7,8 @@ class ViewManager {
     this.progressBar = document.getElementById('progressBar');
     this.output = document.getElementById('output');
 
-    this.formatter = new Intl.DateTimeFormat('pt', {
-      locale: 'pt-br',
+    this.formatter = new Intl.DateTimeFormat('en-US', {
+      locale: 'en-US',
       month: 'long',
       day: 'numeric',
       year: 'numeric',
@@ -19,8 +19,8 @@ class ViewManager {
     this.modalInstance = {};
   }
 
-  configureModal() {
-    this.modalInstance = M.Modal.init(this.progressModal, {
+  configureModal(_M) {
+    this.modalInstance = _M.Modal.init(this.progressModal, {
       opacity: 0,
       dismissable: false,
       onOpenEnd() {
@@ -48,7 +48,6 @@ class ViewManager {
 
   configureFileBtnClick() {
     this.newFileBtn.onclick = () => this.fileElem.click();
-    console.log(this.newFileBtn);
   }
 
   getIcon(file) {
@@ -67,15 +66,13 @@ class ViewManager {
       file: '',
     };
 
-    return `
-    <i class="material-icons ${colors[icon]} left">${icon}</i
-    `;
+    return `<i class="material-icons ${colors[icon]} left">${icon}</i>`;
   }
 
   updateCurrentFiles(files) {
     const template = (item) => `
        <tr>
-            <td>${this.makeIcon(item.file)} ${item.file}</td>
+            <td>${this.makeIcon(item.file)}</td>
             <td>${item.owner}</td>
             <td>${this.formatter.format(new Date(item.lastModified))}</td>
             <td>${item.size}</td>

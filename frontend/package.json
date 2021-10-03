@@ -1,14 +1,17 @@
 {
-  "name": "backend",
+  "name": "frontend",
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "author": "Rodrigo Silva <rodsilvasoul@gmail.com>",
   "description": "A implementation of the google drive upload process",
+  "scripts": {
+    "start": "npx http-server public -o",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch --runInBand",
+    "test:cov": "NODE_OPTIONS=--experimental-vm-modules npx jest --no-cache --runInBand --coverage"
+  },
   "dependencies": {
     "http-server": "^13.0.2"
-  },
-  "scripts": {
-    "start": "npx http-server public -o"
   }
 }

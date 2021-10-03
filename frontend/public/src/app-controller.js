@@ -9,7 +9,7 @@ class AppController {
 
   async init() {
     this.viewManager.configureFileBtnClick();
-    this.viewManager.configureModal();
+    this.viewManager.configureModal(M);
     this.viewManager.configureFileChange(this.onFileChange.bind(this));
 
     this.connectionManager.configureEvents({

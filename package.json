@@ -1,0 +1,10 @@
+{
+  "name": "google-drive-clone",
+  "version": "1.0.0",
+  "author": "Rodrigo silva <rodsilvasoul@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "jest": "^27.2.4"
+  }
+}

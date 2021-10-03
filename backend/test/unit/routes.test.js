@@ -45,17 +45,18 @@ describe('#Routes test suite', () => {
   });
 
   describe('#handler', () => {
-    test('given an inexistent route ir should choose default route', () => {
+    test('given an not supported method it should choose unsupported method', () => {
       const router = new Router();
       const params = {
         ...defaultParams,
       };
 
-      params.request.method = 'inexistent';
+      params.request.method = 'DELETE';
 
       router.handler(...params.values());
 
-      expect(params.response.end).toBeCalledWith('Default Router');
+      expect(params.response.end).toHaveBeenCalledWith('Unsupported method');
+      expect(params.response.writeHead).toHaveBeenCalledWith(405);
     });
 
     test('given method GET it should choose get route', async () => {

@@ -20,9 +20,9 @@ class Router {
     this.io = io;
   }
 
-  async defaultRoute(req, res) {
+  async unsupportedMethod(req, res) {
     res.writeHead(405);
-    res.end('unsupported method');
+    res.end('Unsupported method');
   }
 
   async options(req, res) {
@@ -66,7 +66,7 @@ class Router {
   handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
 
-    const chosen = this[req.method.toLowerCase()] || this.defaultRoute;
+    const chosen = this[req.method.toLowerCase()] || this.unsupportedMethod;
 
     return chosen.apply(this, [req, res]);
   }

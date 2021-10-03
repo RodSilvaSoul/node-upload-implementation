@@ -15,13 +15,14 @@ class Router {
     this.downloadsFolder = downloadsFolder;
     this.fileHelper = FileHelper;
   }
-a
+
   setSocketInstance(io) {
     this.io = io;
   }
 
   async defaultRoute(req, res) {
-    res.end('Default Router');
+    res.writeHead(405);
+    res.end('unsupported method');
   }
 
   async options(req, res) {

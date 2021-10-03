@@ -5,7 +5,8 @@
 
 export default {
   clearMocks: true,
-  collectCoverage: false,
+  restoreMocks: true,
+  // collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   coverageReporters: ['text', 'lcov'],
@@ -14,7 +15,7 @@ export default {
     global: {
       branches: 100,
       functions: 100,
-      line: 100,
+      lines: 100,
       statements: 100,
     },
   },

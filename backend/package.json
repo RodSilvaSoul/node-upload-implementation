@@ -1,0 +1,32 @@
+{
+  "name": "google-drive-clone",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "type": "module",
+  "author": "Rodrigo Silva <rodsilvasoul@gmail.com>",
+  "description": "A implementation of the google drive upload process",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch --runInBand",
+    "test:cov": "NODE_OPTIONS=--experimental-vm-modules npx jest --no-cache --runInBand --coverage",
+    "start": "npx nodemon --inspect src/index.js"
+  },
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "form-data": "^4.0.0",
+    "nodemon": "^2.0.13",
+    "pino": "^6.13.3",
+    "pino-pretty": "^7.0.1",
+    "pretty-bytes": "^5.6.0",
+    "socket.io": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.2.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

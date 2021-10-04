@@ -16,7 +16,7 @@ const config = {
   },
   watchPathIgnorePatterns: ['node_modules'],
   transformIgnorePatterns: ['node_modules'],
-  collectCoverageFrom: ['**/*.js', '!**/index.js'],
+  collectCoverageFrom: ['src/**/*.js', '!src/**/index.js'],
 };
 
 export {

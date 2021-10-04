@@ -1,6 +1,7 @@
-import { config } from '../jest.default.config.js'
+import { config } from '../jest.default.config.js';
 
 export default {
   ...config,
-  testEnvironment: 'jsdom'
+  testEnvironment: 'jsdom',
+  collectCoverageFrom: ['public/src/**/*.js'],
 };

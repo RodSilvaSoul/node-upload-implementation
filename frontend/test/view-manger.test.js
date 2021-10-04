@@ -1,7 +1,7 @@
 import { describe, test, expect, jest } from '@jest/globals';
 import { ViewManager } from '../public/src/view-manager.js';
 
-describe('#view-manager', () => {
+describe('#view-manager  test suite', () => {
   describe('#configureModal', () => {
     test('it should configure the modal element properly', () => {
       jest

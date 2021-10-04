@@ -6,6 +6,10 @@ class DragAndDropManager {
 
   init({ onDropHandler }) {
     this.onDropHandler = onDropHandler;
+
+    this.disableDragAnDropEvents();
+    this.enableHighLightOnDrag();
+    this.enableDrop();
   }
 
   disableDragAnDropEvents() {

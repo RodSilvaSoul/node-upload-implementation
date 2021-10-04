@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "author": "Rodrigo Silva <rodsilvasoul@gmail.com>",
-  "description": "A implementation of the google drive upload process",
+  "description": "the frontend oh the application",
   "scripts": {
     "start": "npx http-server public -o",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",

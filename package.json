@@ -1,9 +1,10 @@
 {
-  "name": "google-drive-clone",
+  "name": "node-upload-implementation",
   "version": "1.0.0",
   "author": "Rodrigo silva <rodsilvasoul@gmail.com>",
   "license": "MIT",
   "type": "module",
+  "description": "an upload implementation on node",
   "devDependencies": {
     "jest": "^27.2.4"
   }

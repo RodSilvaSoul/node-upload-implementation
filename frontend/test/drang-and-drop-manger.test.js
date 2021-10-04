@@ -72,9 +72,7 @@ describe('#DragAndDropManger test suite', () => {
 
       expect(addEventCalls).toEqual(expectedCalls);
 
-      for (const index in addEventCalls) {
-        addEventCalls[index][1].call();
-      }
+      expectedCalls.forEach((call) => call[1]());
 
       const expectedClassAddCalls = [
         'highlight',
@@ -117,6 +115,7 @@ describe('#DragAndDropManger test suite', () => {
           files: [],
         },
       };
+
       addEventCalls[0][1](mockedEvent);
 
       expect(dragAndDropManger.dropArea.classList.remove).toHaveBeenCalledWith(
